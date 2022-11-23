@@ -1,0 +1,20 @@
+
+
+<div [id]="algorithm.route" class="card tree-algorithm">
+  <div class="card-body">
+    <h5 class="card-title">{{ algorithm.name }}</h5>
+    <p class="card-text" [innerHTML]="algorithm.description"></p>
+    <iframe [src]="algorithm.videoSafeUrl" title="YouTube video player"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+    <ng-template [ngIf]="algorithmButtonClicked">
+      <pre class="code">
+        <code [innerHTML]="algorithm.code"></code>
+      </pre>
+
+    </ng-template>
+    <div class="btn" (click)="openAlgorithm()">
+      {{ innerAlgorithmButton }}
+    </div>
+  </div>
+</div>

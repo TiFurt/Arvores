@@ -1,11 +1,8 @@
-<main>
   <header>
   <ul>
-    <li>Home</li>
-    <li>Árvores B (B-Tree)</li>
-    <li>Árvores B+</li>
-    <li>Árvores B*</li>
-    <li>Árvores Vermelho e Preto</li>
+    <li><a routerLink="/">
+      <img src="./assets/icons/home.svg"  alt="home" class="header-icon">
+    </a></li>
+    <li class="tree" *ngFor="let item of treeAlgorithm" (click)="Scroll(item.route)" [ngClass]="{'visible': item.route == detectedElm}" >{{ item.name }}</li>
   </ul>
   </header>
-</main>
